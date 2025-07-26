@@ -27,69 +27,74 @@
             <h1>Criar Relatórios</h1>
             <div class="subMain" id="selectTri-group">
                 <!-- Estudar php para botar o id do trimestre em value e o trimestre respectivo no texto para o usuário -->
-                <label for="id-select-trimester">Trimestre</label>
-                <select name="select-trimester" id="id-select-trimester">
-                    <option value="*ID DO TRIMESTRE*">2025/1</option>
-                </select>
-                <label for="id-select-group">Turma</label>
-                <select name="select-group" id="id-select-group">
-                    <option value="crianças">Crianças</option>
-                    <option value="jovens">Jovens</option>
-                    <option value="adultos">Adultos</option>
-                </select>
+                <span>
+                    <label for="id-select-trimester">Trimestre</label>
+                    <select name="select-trimester" id="id-select-trimester">
+                        <option value="*ID DO TRIMESTRE*">2025/1</option>
+                    </select>
+                </span>
+                <span>
+                    <label for="id-select-group">Turma</label>
+                    <select name="select-group" id="id-select-group">
+                        <option value="crianças">Crianças</option>
+                        <option value="jovens">Jovens</option>
+                        <option value="adultos">Adultos</option>
+                    </select>
+                </span>
+                <!-- Fazer a lógica do botão para aparecer os alunos -->
+                <button id="selectTri-group-confirm">Confirmar</button>
             </div>
-            <!-- Fazer a lógica do botão para aparecer os alunos -->
-            <button id="selectTri-group-confirm">Confirmar</button>
-            <div class="subMain" id="boxStudents">
-                <!-- Definir para a tabela só aparecer quando tiver algum aluno cadastrado no trimestre e turma + mensagem de quando nao houver aluno ou não tiver algum trimestre/turma solicitado-->
-                <table>
-                    <thead>
-                        <tr>
-                            <!-- Definir um número para cada um e organizar alfabeticamente -->
-                            <th>N°</th>
-                            <th>Nome</th>
-                            <th>Presença</th>
-                            <th>Matriculado</th>
-                            <th>Bíblias</th>
-                            <th>Revistas</th>
-                            <th>Pontuação</th>
-                        </tr>
-                    </thead>
-                    <!-- Definir um loop para criar um tr para cada aluno -->
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
-            <div class="subMain" id="boxClassData">
-                <div class="classDataChild" id="generalData">
-                    <label for="idLicao">Lição</label>
-                    <input type="number" name="nLicao" id="idLicao" min="1" max="12" required>
-                    <label for="idOferta">Oferta</label>
-                    <input type="number" name="nOferta" id="idOferta" min="0" required pattern="[0-9]{2}.[0-9]{2}">
-                    <label for="idData">Data</label>
-                    <input type="date" name="nData" id="idData" required>
-                    <label for="idMatriculados">Matriculados</label>
-                    <input type="number" name="nMatriculados" id="idMatriculados" readonly>
-                    <label for="idVisitantes">Visitantes</label>
-                    <input type="number" name="nVisitantes" id="idVisistantes" readonly>
-                    <label for="idPresencaTotal">Presença Total</label>
-                    <input type="number" name="nPresencaTotal" id="idPresencaTotal" readonly>
-                    <label for="idFaltas">Faltas</label>
-                    <input type="number" name="nFaltas" id="idFaltas" readonly>
-                    <label for="idBiblia">Bíblias</label>
-                    <input type="number" name="nBiblia" id="idBiblia" readonly>
-                    <label for="idRevistas">Revistas</label>
-                    <input type="number" name="nRevistas" id="idRevistas" readonly>
+            <div class="subMain">
+                <div id="boxStudents">
+                    <!-- Definir para a tabela só aparecer quando tiver algum aluno cadastrado no trimestre e turma + mensagem de quando nao houver aluno ou não tiver algum trimestre/turma solicitado-->
+                    <table>
+                        <thead>
+                            <tr>
+                                <!-- Definir um número para cada um e organizar alfabeticamente -->
+                                <th>N°</th>
+                                <th>Nome</th>
+                                <th>Presença</th>
+                                <th>Matriculado</th>
+                                <th>Bíblias</th>
+                                <th>Revistas</th>
+                                <th>Pontuação</th>
+                            </tr>
+                        </thead>
+                        <!-- Definir um loop para criar um tr para cada aluno -->
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="classDataChildren" id="addStudent-image">
-                    <label for="idAddImages">Adicionar imagens</label>
-                    <input type="file" name="nAddImages" id="idAddImages">
-                    <button>Adicionar Vis/Mat</button>
+                <div id="boxClassData">
+                    <div class="classDataChild" id="generalData">
+                        <label for="idLicao">Lição</label>
+                        <input type="number" name="nLicao" id="idLicao" min="1" max="12" required>
+                        <label for="idOferta">Oferta</label>
+                        <input type="number" name="nOferta" id="idOferta" min="0" required pattern="[0-9]{2}.[0-9]{2}">
+                        <label for="idData">Data</label>
+                        <input type="date" name="nData" id="idData" required>
+                        <label for="idMatriculados">Matriculados</label>
+                        <input type="number" name="nMatriculados" id="idMatriculados" readonly>
+                        <label for="idVisitantes">Visitantes</label>
+                        <input type="number" name="nVisitantes" id="idVisistantes" readonly>
+                        <label for="idPresencaTotal">Presença Total</label>
+                        <input type="number" name="nPresencaTotal" id="idPresencaTotal" readonly>
+                        <label for="idFaltas">Faltas</label>
+                        <input type="number" name="nFaltas" id="idFaltas" readonly>
+                        <label for="idBiblia">Bíblias</label>
+                        <input type="number" name="nBiblia" id="idBiblia" readonly>
+                        <label for="idRevistas">Revistas</label>
+                        <input type="number" name="nRevistas" id="idRevistas" readonly>
+                    </div>
+                    <div class="classDataChildren" id="addStudent-image">
+                        <label for="idAddImages">Adicionar imagens</label>
+                        <input type="file" name="nAddImages" id="idAddImages">
+                        <button>Adicionar Vis/Mat</button>
+                    </div>
                 </div>
+                <input type="submit" value="Salvar">
             </div>
-            <input type="submit" value="Salvar">
         </form>
-        
     </div>
 </body>
 </html>

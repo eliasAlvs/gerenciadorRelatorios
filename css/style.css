@@ -22,4 +22,6 @@
   --boxShadow-hover: 0 4px 18px rgba(0, 0, 0, 0.651);
   --textShadow: 0 4px 8px rgba(0, 0, 0, 0.13);
   --textShadow-hover: 0 4px 12px rgba(255, 255, 255, 0.13);
+
+  --border: 1px solid #5d6d7e59;
 }
