@@ -14,7 +14,7 @@
             <p>EBD</p>
         </div>
         <div id="boxMenuLinks">
-            <a href="createReports.html" class="menuLinks">Criar</a>
+            <a href="createReports.php" class="menuLinks">Criar</a>
             <a href="accessReports.php" class="menuLinks">Consultar</a>
             <a href="students.php" class="menuLinks">Alunos</a>
         </div>
