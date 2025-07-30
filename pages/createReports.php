@@ -62,37 +62,74 @@
                         </thead>
                         <!-- Definir um loop para criar um tr para cada aluno -->
                         <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Elias Alves Lima</td>
+                                <td><input type="checkbox" name="nPresencaCheckbox" id="idPresencaCheckbox" checked></td>
+                                <td>Ícone Certo/Errado</td>
+                                <td><input type="checkbox" name="nBibliasCheckbox" id="idBibliasCheckbox"></td>
+                                <td><input type="checkbox" name="nRevistasCheckbox" id="idRevistasCheckbox"></td>
+                                <td>+7</td>
+                            </tr>
                         </tbody>
+
                     </table>
                 </div>
+            </div>
+            <div class="subMain">
                 <div id="boxClassData">
-                    <div class="classDataChild" id="generalData">
-                        <label for="idLicao">Lição</label>
-                        <input type="number" name="nLicao" id="idLicao" min="1" max="12" required>
-                        <label for="idOferta">Oferta</label>
-                        <input type="number" name="nOferta" id="idOferta" min="0" required pattern="[0-9]{2}.[0-9]{2}">
-                        <label for="idData">Data</label>
-                        <input type="date" name="nData" id="idData" required>
-                        <label for="idMatriculados">Matriculados</label>
-                        <input type="number" name="nMatriculados" id="idMatriculados" readonly>
-                        <label for="idVisitantes">Visitantes</label>
-                        <input type="number" name="nVisitantes" id="idVisistantes" readonly>
-                        <label for="idPresencaTotal">Presença Total</label>
-                        <input type="number" name="nPresencaTotal" id="idPresencaTotal" readonly>
-                        <label for="idFaltas">Faltas</label>
-                        <input type="number" name="nFaltas" id="idFaltas" readonly>
-                        <label for="idBiblia">Bíblias</label>
-                        <input type="number" name="nBiblia" id="idBiblia" readonly>
-                        <label for="idRevistas">Revistas</label>
-                        <input type="number" name="nRevistas" id="idRevistas" readonly>
+                    <div class="classDataChildren" id="generalData">
+                        <span>
+                            <label for="idMatriculados">Matriculados</label>
+                            <input type="number" name="nMatriculados" id="idMatriculados" readonly>
+                            
+                        </span>
+                        <span>
+                            <label for="idBiblia">Bíblias</label>
+                            <input type="number" name="nBiblia" id="idBiblia" readonly>
+                        </span>
+                        <span>
+                            <label for="idPresencaTotal">Presença Total</label>
+                            <input type="number" name="nPresencaTotal" id="idPresencaTotal" readonly>
+                        </span>
+                        <span>
+                            <label for="idVisitantes">Visitantes</label>
+                            <input type="number" name="nVisitantes" id="idVisistantes" readonly>
+                        </span>
+                        <span>
+                            <label for="idRevistas">Revistas</label>
+                            <input type="number" name="nRevistas" id="idRevistas" readonly>
+                        </span>
+                        <span>
+                            <label for="idFaltas">Faltas</label>
+                            <input type="number" name="nFaltas" id="idFaltas" readonly>
+                        </span>
+                        <span>
+                            <label for="idLicao">Lição</label>
+                            <input type="number" name="nLicao" id="idLicao" min="1" max="12" required>
+                        </span>
+                        <span>
+                            <label for="idOferta">Oferta</label>
+                            <input type="number" name="nOferta" id="idOferta" min="0" required pattern="[0-9]{2}.[0-9]{2}">
+                        </span>
+                        <span>
+                            <label for="idData">Data</label>
+                            <input type="date" name="nData" id="idData" required>
+                            
+                        </span>
                     </div>
                     <div class="classDataChildren" id="addStudent-image">
-                        <label for="idAddImages">Adicionar imagens</label>
-                        <input type="file" name="nAddImages" id="idAddImages">
                         <button>Adicionar Vis/Mat</button>
+                        <span>
+                            <label for="idAddImages">Adicionar imagens:</label>
+                            <input type="file" name="nAddImages" id="idAddImages" value="Adicionar imagens">
+                        </span>
+                    </div>
+                    <div class="classDataChildren" id="saveResetFormulary">
+                        <input type="submit" value="Salvar">
+                        <input type="reset" value="Resetar">
                     </div>
                 </div>
-                <input type="submit" value="Salvar">
             </div>
         </form>
     </div>

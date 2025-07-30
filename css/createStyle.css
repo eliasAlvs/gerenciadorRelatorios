@@ -8,7 +8,7 @@ div#main > form{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
 }
 div#main > form > h1{
@@ -16,7 +16,6 @@ div#main > form > h1{
     color: var(--color-title);
     text-shadow: var(--textShadow);
     font-size: 55px;
-    border-bottom: var(--border);
     padding: 5px;
 }
 div#main > form > div.subMain{
@@ -24,12 +23,14 @@ div#main > form > div.subMain{
 }
 div#main > form > div#selectTri-group{
     font-size: 25px;
-    padding: 5px;
+    padding: 10px 5px;
     font-weight: bold;
     color: var(--color-subTitle);
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border-top: var(--border);
+    border-bottom: var(--border);
 }
 div#main > form > div#selectTri-group > span{
     width: 15%;
@@ -40,7 +41,7 @@ div#main > form > div#selectTri-group > span > select{
     font-size: 16px;
 }
 div#main > form > div#selectTri-group > button{
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
     color: var(--color-button-text);
     background-color: var(--color-button);
@@ -48,3 +49,90 @@ div#main > form > div#selectTri-group > button{
     border-radius: 5px;
     font-weight: bold;
 }
+div#main > form > div.subMain > div#boxStudents > table{
+    width: 100%;
+    border-collapse: collapse;
+}
+div#main > form > div.subMain > div#boxStudents > table, tr, th, td{
+    border-bottom: var(--border);
+    padding: 15px;
+    text-align: center;
+}
+th:first-child, td:first-child{
+    text-align: left;
+}
+
+
+
+div#main > form > div.subMain > div#boxClassData{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+div#main > form > div.subMain > div#boxClassData > div#generalData{
+    width: 100%;
+    height: 22vh;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 30% 30% 30%;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 15px 5px;
+}
+div#main > form > div.subMain > div#boxClassData > div#generalData label{
+    font-weight: bold;
+    font-size: 16px;
+}
+div#main > form > div.subMain > div#boxClassData > div#generalData input{
+    width: 95%;
+    font-size: 16px;
+    padding: 2px;
+}
+
+
+
+div#main > form > div.subMain > div#boxClassData > div#addStudent-image{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div#main > form > div.subMain > div#boxClassData > div#addStudent-image > button{
+    width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-button-text);
+    background-color: var(--color-button);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+div#main > form > div.subMain > div#boxClassData > div#addStudent-image > span{
+    font-size: 14px;
+    font-weight: bold;
+}
+div#main > form > div.subMain > div#boxClassData > div#addStudent-image > span > input::file-selector-button{
+    font-size: 14px;
+    color: var(--color-button-text);
+    background-color: var(--color-button);
+    border: none;
+    width: 160px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+div#main > form > div.subMain > div#boxClassData > div#saveResetFormulary > input{
+    width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-button-text);
+    background-color: var(--color-button);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
